@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:arctis="http:///schemas/arctis/_WFTqUHjGEdyxtoUMycQn9Q/10" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:graphics="http:///schemas/graphics/_gd9EwIuAEdytfOWtpACIqw/6" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/arctis/_WFTqUHjGEdyxtoUMycQn9Q/10 pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q http:///schemas/graphics/_gd9EwIuAEdytfOWtpACIqw/6 pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_geG1wIuAEdytfOWtpACIqw">
+  <uml:Package xmi:id="_EdO08LRPEeOms6fm9QBITg" name="termassigment">
+    <packagedElement xmi:type="uml:Collaboration" xmi:id="_EdPcArRPEeOms6fm9QBITg" name="TaxiFleet" classifierBehavior="_EhrQEbRPEeOms6fm9QBITg" collaborationRole="_EhxWsLRPEeOms6fm9QBITg">
+      <ownedAttribute xmi:id="_EhxWsLRPEeOms6fm9QBITg" name="component"/>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_EhrQEbRPEeOms6fm9QBITg" name="TaxiFleet" group="_Eh55kLRPEeOms6fm9QBITg" partition="_Eh55kLRPEeOms6fm9QBITg">
+        <group xmi:type="uml:ActivityPartition" xmi:id="_Eh55kLRPEeOms6fm9QBITg" name="component"/>
+      </ownedBehavior>
+    </packagedElement>
+    <profileApplication xmi:id="_EdPcALRPEeOms6fm9QBITg">
+      <eAnnotations xmi:id="_EdPcAbRPEeOms6fm9QBITg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_WFTqUXjGEdyxtoUMycQn9Q"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://ARCTIS_PROFILES/arctis.profile.uml#_rE77YK4iEduZSuTiwKs5Lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_Ehx9wLRPEeOms6fm9QBITg">
+      <eAnnotations xmi:id="_Ehx9wbRPEeOms6fm9QBITg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_geG1wIuAEdytfOWtpACIqw"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://RAMSES_GRAPHIC_PROFILES/no.ntnu.item.ramses.graphicprofile.uml#_UEANMUVlEduH9aQE_pc66w"/>
+    </profileApplication>
+  </uml:Package>
+  <arctis:system xmi:id="_EhrQELRPEeOms6fm9QBITg" base_Collaboration="_EdPcArRPEeOms6fm9QBITg"/>
+  <arctis:system xmi:id="_EhtFQLRPEeOms6fm9QBITg" base_Activity="_EhrQEbRPEeOms6fm9QBITg"/>
+  <graphics:Shape xmi:id="_Eh2PMLRPEeOms6fm9QBITg" x="250" y="220" width="120" height="70" base_Element="_EhxWsLRPEeOms6fm9QBITg"/>
+  <graphics:Shape xmi:id="_Eh7HsLRPEeOms6fm9QBITg" x="180" y="55" width="613" height="54" base_Element="_EhrQEbRPEeOms6fm9QBITg"/>
+  <graphics:Shape xmi:id="_Eh9j8LRPEeOms6fm9QBITg" x="180" y="108" width="613" height="415" base_Element="_Eh55kLRPEeOms6fm9QBITg"/>
+</xmi:XMI>
