@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block
+    name="Map Update Test Sequence" 
+    uuid="_r36rkdBnEeO5baVSDLhmxg" 
+    status="under construction" 
+    type="block" 
+    >
+    <required>
+        <block name="c0" uuid="_vCXJcVYREd-4YqQXCGC3ew"/>
+    </required>
+</block>

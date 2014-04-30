@@ -22,4 +22,9 @@ public class UserClient extends Block {
 		return alias_customer;
 	}
 
+	public String getMessage(Order order) {
+		return order.getMessage();
+	}
+
+
 }

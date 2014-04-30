@@ -3,6 +3,13 @@
     name="Taxi" 
     uuid="_6tC0sbOHEeOgsfGyraXgRA" 
     status="under construction" 
+    session="multi_session" 
     type="block" 
     >
+    <required>
+        <block name="c0" uuid="_vVTFQc6iEeO1DpbTGv7cMA"/>
+        <block name="c1" uuid="_eGmYMc-gEeOb3ZWwXsIlMQ"/>
+        <block name="c2" uuid="_npFb46N-EeO_erXR8oUgTA"/>
+        <block name="c3" uuid="_kVlugbXMEeOxAeSLuadh7Q"/>
+    </required>
 </block>
