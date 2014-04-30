@@ -75,7 +75,7 @@
         <result xmi:id="_dLVo8NCUEeO5baVSDLhmxg" name="" inPartition="_foGzqc6iEeO1DpbTGv7cMA" outgoing="_slxWoNCUEeO5baVSDLhmxg" type="_fic3wM7HEeO1DpbTGv7cMA"/>
       </node>
       <node xmi:type="uml:ForkNode" xmi:id="_lG040dCUEeO5baVSDLhmxg" name="f1" inPartition="_foGzqc6iEeO1DpbTGv7cMA" outgoing="_lG040NCUEeO5baVSDLhmxg _p2YYMNCUEeO5baVSDLhmxg" incoming="_erRKoNCUEeO5baVSDLhmxg"/>
-      <node xmi:type="uml:ReadVariableAction" xmi:id="_ooqA0NCUEeO5baVSDLhmxg" name="rv0" inPartition="_foGzqc6iEeO1DpbTGv7cMA" outgoing="_rHZUINCUEeO5baVSDLhmxg" incoming="_p2YYMNCUEeO5baVSDLhmxg" variable="_eVY70M7UEeO1DpbTGv7cMA"/>
+      <node xmi:type="uml:ReadVariableAction" xmi:id="_ooqA0NCUEeO5baVSDLhmxg" name="rv0" inPartition="_foGzqc6iEeO1DpbTGv7cMA" outgoing="_rHZUINCUEeO5baVSDLhmxg" incoming="_p2YYMNCUEeO5baVSDLhmxg" variable="_ei6agNCBEeO5baVSDLhmxg"/>
       <node xmi:type="uml:ForkNode" xmi:id="_uVuRUNCUEeO5baVSDLhmxg" name="f2" inPartition="_foGzqc6iEeO1DpbTGv7cMA" outgoing="_uVtqQNCUEeO5baVSDLhmxg _y6cZsNCUEeO5baVSDLhmxg" incoming="_slxWoNCUEeO5baVSDLhmxg"/>
       <node xmi:type="uml:ReadVariableAction" xmi:id="_wsfUYNCUEeO5baVSDLhmxg" name="rv1" inPartition="_foGzqc6iEeO1DpbTGv7cMA" outgoing="_zEDBoNCUEeO5baVSDLhmxg" incoming="_y6cZsNCUEeO5baVSDLhmxg" variable="_ei6agNCBEeO5baVSDLhmxg"/>
     </packagedElement>
@@ -237,7 +237,7 @@
   <graphics:Shape xmi:id="_gSVPENCUEeO5baVSDLhmxg" aux1="21 0 -126 72  21 -72 -126 0 " base_Element="_erRKoNCUEeO5baVSDLhmxg"/>
   <graphics:Shape xmi:id="_lG2G8NCUEeO5baVSDLhmxg" x="594" y="270" width="54" height="19" base_Element="_lG040dCUEeO5baVSDLhmxg" orientation="north"/>
   <graphics:Shape xmi:id="_n5xhkNCUEeO5baVSDLhmxg" aux1="72 0 0 -58 " base_Element="_lG040NCUEeO5baVSDLhmxg"/>
-  <graphics:Shape xmi:id="_oorO8NCUEeO5baVSDLhmxg" x="540" y="270" width="163" height="55" base_Element="_ooqA0NCUEeO5baVSDLhmxg"/>
+  <graphics:Shape xmi:id="_oorO8NCUEeO5baVSDLhmxg" x="576" y="270" width="102" height="55" base_Element="_ooqA0NCUEeO5baVSDLhmxg"/>
   <graphics:Shape xmi:id="_tajpkNCUEeO5baVSDLhmxg" aux1="" base_Element="_slxWoNCUEeO5baVSDLhmxg"/>
   <graphics:Shape xmi:id="_uVu4YNCUEeO5baVSDLhmxg" x="756" y="360" width="54" height="19" base_Element="_uVuRUNCUEeO5baVSDLhmxg" orientation="north"/>
   <graphics:Shape xmi:id="_uzwRINCUEeO5baVSDLhmxg" aux1="0 -18 -57 0 " base_Element="_uVtqQNCUEeO5baVSDLhmxg"/>

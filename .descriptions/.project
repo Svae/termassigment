@@ -4,6 +4,7 @@
     uuid="_NgdqQLZjEeOec4AGh7IKnw" 
     >
     <dependencies>
+        <dependency name="com.bitreactive.library.counter" uuid="_gw5scEzzEeG_68vz5_hEdQ" version="1.2.0"/>
         <dependency name="com.bitreactive.library.genericmapui" uuid="_ufQLEJFhEeKUbpabydPWtg" version="1.1.0"/>
         <dependency name="com.bitreactive.library.gson" uuid="_bCjFUFtTEeGtaPY7WHS-jQ" version="1.2.1"/>
         <dependency name="com.bitreactive.library.mqtt" uuid="_iVDkMOJLEeGulKFN7xtCsw" version="1.7.0"/>

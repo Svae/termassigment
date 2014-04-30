@@ -6,13 +6,13 @@
       <ownedBehavior xmi:type="uml:Activity" xmi:id="_Iw5qUc--EeOsztpnYn-Lug" name="TestBlock2" group="_Iw7fgM--EeOsztpnYn-Lug" partition="_Iw7fgM--EeOsztpnYn-Lug" node="_YdEBMM--EeOsztpnYn-Lug _pSQcsM--EeOsztpnYn-Lug _xpercNBwEeO5baVSDLhmxg">
         <ownedOperation xmi:id="_XpnyEM--EeOsztpnYn-Lug" name="makeOrder"/>
         <ownedOperation xmi:id="_f8zwQM--EeOsztpnYn-Lug" name="printOutDuo"/>
-        <ownedOperation xmi:id="_RTzrANB4EeO5baVSDLhmxg" name="available"/>
+        <edge xmi:type="uml:ObjectFlow" xmi:id="_yq7hYNBwEeO5baVSDLhmxg" name="e0" inPartition="_Iw7fgM--EeOsztpnYn-Lug" source="_YdEBMM--EeOsztpnYn-Lug" target="_xqTK0NBwEeO5baVSDLhmxg"/>
         <edge xmi:type="uml:ControlFlow" xmi:id="_y3-e4NBwEeO5baVSDLhmxg" name="e1" inPartition="_Iw7fgM--EeOsztpnYn-Lug" source="_xqUY8NBwEeO5baVSDLhmxg" target="_pSQcsM--EeOsztpnYn-Lug"/>
-        <group xmi:type="uml:ActivityPartition" xmi:id="_Iw7fgM--EeOsztpnYn-Lug" name="component" node="_YdEBMM--EeOsztpnYn-Lug _pSQcsM--EeOsztpnYn-Lug _xpercNBwEeO5baVSDLhmxg _xqTK0NBwEeO5baVSDLhmxg _xqUY8NBwEeO5baVSDLhmxg" edge="_y3-e4NBwEeO5baVSDLhmxg"/>
-        <node xmi:type="uml:InitialNode" xmi:id="_YdEBMM--EeOsztpnYn-Lug" name="i0" inPartition="_Iw7fgM--EeOsztpnYn-Lug"/>
+        <group xmi:type="uml:ActivityPartition" xmi:id="_Iw7fgM--EeOsztpnYn-Lug" name="component" node="_YdEBMM--EeOsztpnYn-Lug _pSQcsM--EeOsztpnYn-Lug _xpercNBwEeO5baVSDLhmxg _xqTK0NBwEeO5baVSDLhmxg _xqUY8NBwEeO5baVSDLhmxg" edge="_yq7hYNBwEeO5baVSDLhmxg _y3-e4NBwEeO5baVSDLhmxg"/>
+        <node xmi:type="uml:InitialNode" xmi:id="_YdEBMM--EeOsztpnYn-Lug" name="i0" inPartition="_Iw7fgM--EeOsztpnYn-Lug" outgoing="_yq7hYNBwEeO5baVSDLhmxg"/>
         <node xmi:type="uml:ActivityFinalNode" xmi:id="_pSQcsM--EeOsztpnYn-Lug" name="x0" inPartition="_Iw7fgM--EeOsztpnYn-Lug" incoming="_y3-e4NBwEeO5baVSDLhmxg"/>
         <node xmi:type="uml:CallBehaviorAction" xmi:id="_xpercNBwEeO5baVSDLhmxg" name="c0" inPartition="_Iw7fgM--EeOsztpnYn-Lug" behavior="_foGzoc6iEeO1DpbTGv7cMA">
-          <argument xmi:id="_xqTK0NBwEeO5baVSDLhmxg" name="alias" inPartition="_Iw7fgM--EeOsztpnYn-Lug" type="_Jg0EUM--EeOsztpnYn-Lug"/>
+          <argument xmi:id="_xqTK0NBwEeO5baVSDLhmxg" name="alias" inPartition="_Iw7fgM--EeOsztpnYn-Lug" incoming="_yq7hYNBwEeO5baVSDLhmxg" type="_Jg0EUM--EeOsztpnYn-Lug"/>
           <result xmi:id="_xqUY8NBwEeO5baVSDLhmxg" name="disconnect" inPartition="_Iw7fgM--EeOsztpnYn-Lug" outgoing="_y3-e4NBwEeO5baVSDLhmxg"/>
         </node>
       </ownedBehavior>

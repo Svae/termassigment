@@ -71,7 +71,7 @@
         </ownedComment>
         <argument xmi:id="_mILrMM-vEeOb3ZWwXsIlMQ" name="json" inPartition="_kVnjsLXMEeOxAeSLuadh7Q" incoming="_4iWgcM-vEeOb3ZWwXsIlMQ" type="_lIytEbXMEeOxAeSLuadh7Q"/>
         <argument xmi:type="uml:ValuePin" xmi:id="_r7LVwNB5EeO5baVSDLhmxg" name="targetClass" type="_lIytEbXMEeOxAeSLuadh7Q">
-          <value xmi:type="uml:LiteralString" xmi:id="__4FwINB5EeO5baVSDLhmxg" name="targetClass" type="_lIytEbXMEeOxAeSLuadh7Q" value="termassigment.taxidispatcher.component.Order"/>
+          <value xmi:type="uml:LiteralString" xmi:id="_r7L80NB5EeO5baVSDLhmxg" name="targetClass" type="_lIytEbXMEeOxAeSLuadh7Q" value="termassigment.taxidispatcher.component.Order"/>
         </argument>
         <result xmi:id="_mIMSQM-vEeOb3ZWwXsIlMQ" name="ok" inPartition="_kVnjsLXMEeOxAeSLuadh7Q" outgoing="_Jh6Y4M-wEeOb3ZWwXsIlMQ" type="_ytkcEM63EeO1DpbTGv7cMA"/>
         <result xmi:id="_mIM5UM-vEeOb3ZWwXsIlMQ" name="error" inPartition="_kVnjsLXMEeOxAeSLuadh7Q" outgoing="_F3qbEM-4EeOb3ZWwXsIlMQ" type="_lIytEbXMEeOxAeSLuadh7Q"/>
