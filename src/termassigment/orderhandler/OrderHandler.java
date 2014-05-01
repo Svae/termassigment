@@ -44,17 +44,35 @@ public class OrderHandler extends Block {
 		return order;	
 	}
 	
-	public Arraylist<String> allocateTaxi(Order order){
+	public ArrayList<String> availbleTaxi(Order order){
 		taxis = new ArrayList<Taxis>();
 		for(Taxis taxi:taxis){
 			if(taxi.getStatus() == "AVAILABLE"){
-				taxis.add(taxi.getAlias()+";"+taxi.getPosistion()+";"+ order.getDestination);
+				available.add(taxi.getAlias()+";"+taxi.getPosistion()+";"+ order.getDestination());
 			}
 		}
-		return taxis;
-		
+		return available;
 	}
 	
+	public String sendOrder(String alias, Order order){
+		messageTopic = alias;
+		order.setStaus("SENT");
+		return order.getDestination()+";"+order.getOrderID();
+	}
+	
+	public Order confirmOrder(String orderStr){
+		String[] str = orderStr.split(";");
+		int orderID = Integer.parseInt(str[1]);
+		String alias = str[0];
+		for(Order order:orders){
+			if(order.getOrderID() == orderID){
+				order.setStaus("CONFIRMED");
+				order.setMessage("A taxi is on it's way");
+				return order;
+			}
+		}
+		return null;
+	}
 	
 	public void changeOrder(Order order){
 		System.out.println("changeorder");
@@ -62,7 +80,7 @@ public class OrderHandler extends Block {
 	}
 	
 	public void cancelOrder(Order order){
-		findOrder(order.getOrderID());
+		
 	}
 	
 	

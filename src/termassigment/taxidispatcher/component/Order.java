@@ -2,11 +2,8 @@ package termassigment.taxidispatcher.component;
 
 public class Order {
 
-	private String user, taxiID, toAddress, fromAddress, message, status;
+	private String user, taxiID, destination, message, status;
 	private int orderID, userPos;
-	private Status statuss;
-	
-	
 	
 	public String getUser() {
 		return user;
@@ -31,7 +28,6 @@ public class Order {
 		return status;
 	}
 
-
 	public Order(String user, String message, String status){
 		this.user = user;
 		this.message = message;
@@ -40,13 +36,10 @@ public class Order {
 	}
 	
 	
-	
 	public String toString(){
-		return "OrderID" + orderID + "	User: " + user + "	Status: " + status+ "	Message: " + message;
+		return "OrderID" + orderID + "	User: " + user + "	Status: " + status+"	Destination: " + destination + "	Message: " + message;
 	}
 	
-	
-
 
 	public void setOrderID(int orderID) {
 		this.orderID = orderID;	
@@ -61,6 +54,11 @@ public class Order {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+
+	public String getDestination() {
+		return destination;
 	}
 	
 }
