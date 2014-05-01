@@ -42,8 +42,10 @@ public class Order {
 	
 	
 	public String toString(){
-		return "userID: " + user + "\n" + "Message: " + message;
+		return "OrderID" + orderID + "	User: " + user + "	Status: " + status+ "	Message: " + message;
 	}
+	
+	
 
 
 	public void setOrderID(int orderID) {
