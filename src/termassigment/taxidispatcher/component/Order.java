@@ -28,11 +28,12 @@ public class Order {
 		return status;
 	}
 
-	public Order(String user, String message, String status){
+	public Order(String user, String adress, String status){
 		this.user = user;
-		this.message = message;
+		this.destination = destination;
 		this.status = status;
 		this.orderID = 0;
+		this.message = "";
 	}
 	
 	
@@ -59,6 +60,17 @@ public class Order {
 
 	public String getDestination() {
 		return destination;
+	}
+
+
+	public void setTaxi(String taxi) {
+		this.taxiID = taxi;
+		
+	}
+
+
+	public void setDestiantion(String adress) {
+		this.destination = adress;
 	}
 	
 }

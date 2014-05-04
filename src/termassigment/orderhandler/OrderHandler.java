@@ -11,41 +11,40 @@ public class OrderHandler extends Block {
 	public ArrayList<Order> orders = new ArrayList<Order>();
 	public ArrayList<Order> orderQue = new ArrayList<Order>();
 	public ArrayList<String> available;
-	public ArrayList<Taxis> taxis;
 	public int orderID = 1;
 	public java.lang.String topic = "order";
 	public java.lang.String message;
 	public java.lang.String messageTopic;
+	public java.util.ArrayList<termassigment.taxicentral.Taxis> taxis;
+	public termassigment.taxidispatcher.component.Order processedOrder;
 	public termassigment.taxidispatcher.component.Order order;
-	
-	
 	public void printOrder(Order order){
 		System.out.println(" OrderID: "+ order.getOrderID() + "\n User: "+order.getUser()+"\n Status: "+ order.getStatus() + "\n Message: "+ order.getMessage());
 	}
 	
-	public void print(String str){
-		System.out.println(str);
-	}
 
-	public Order checkOrder(Order userOrder){
-		if(userOrder.getStatus() == "NEW") newOrder(userOrder);
-		else if(userOrder.getStatus() == "CHANGE")changeOrder(userOrder);
-		else if(userOrder.getStatus() == "CANCEL")cancelOrder(userOrder);
-		return userOrder;
+	//--------- ORDER ---------
+	public String checkOrder(Order userOrder){
+		return userOrder.getStatus();
 	}
+	
+	
 	
 	public Order newOrder(Order order){
 		order.setOrderID(orderID);
 		orderID = orderID + 1;
 		orders.add(order);
-		order.setStaus("WAITING");
 		orderQue.add(order);
+		order.setStaus("WAITING");
 		order.setMessage("Your order has been recieved");
 		return order;	
 	}
 	
+	
+	
+	// --------- ORDER --------- NEWORDER ---------
 	public ArrayList<String> availbleTaxi(Order order){
-		taxis = new ArrayList<Taxis>();
+		available = new ArrayList<String>();
 		for(Taxis taxi:taxis){
 			if(taxi.getStatus() == "AVAILABLE"){
 				available.add(taxi.getAlias()+";"+taxi.getPosistion()+";"+ order.getDestination());
@@ -54,56 +53,70 @@ public class OrderHandler extends Block {
 		return available;
 	}
 	
-	public String sendOrder(String alias, Order order){
-		messageTopic = alias;
-		order.setStaus("SENT");
-		return order.getDestination()+";"+order.getOrderID();
-	}
 	
-	public Order confirmOrder(String orderStr){
-		String[] str = orderStr.split(";");
-		int orderID = Integer.parseInt(str[1]);
-		String alias = str[0];
-		for(Order order:orders){
-			if(order.getOrderID() == orderID){
-				order.setStaus("CONFIRMED");
-				order.setMessage("A taxi is on it's way");
-				return order;
-			}
+	public Order cancelOrder(Order order){
+		if(orderQue.contains(order)){
+			orderQue.remove(order);
 		}
-		return null;
+		
+		order.setMessage("The order has been cancelled");
+		order.setStaus("CANCELLED");
+		System.out.println("Order: "+ order.toString());
+		System.out.println(orders);
+		return order;
+		
+		
 	}
 	
 	public void changeOrder(Order order){
-		System.out.println("changeorder");
+		
 		
 	}
+
 	
-	public void cancelOrder(Order order){
+	public ArrayList<String> proccessOrder(Order order){
+		available = new ArrayList<String>();
+		for(Taxis taxi:taxis){
+			if(taxi.getStatus() == "AVAIABLE"){
+				available.add(taxi.getAlias()+";"+ taxi.getPosistion()+";"+order.getDestination());
+			}
+		}
+		return available;
+	}
+	
+	public Order nextOrder(){
+		if (orderQue.size()>0){
+			return orderQue.get(0);
+		}
+		return null;
 		
 	}
-	
-	
-	
-	if(userOrder.getStatus().equals("NEW")){
-		orderID++;
-		orders.add(order);
-		order.setStaus("WAITING");
-		order.setMessage("Order is  recieved");
+		
+	public String sendOrder(Order order, String alias){
+		order.setStaus("SENT");
+		order.setTaxi(alias);
+		return order.getDestination()+";"+order.getOrderID()+";"+order.getUser();
 	}
-	if (order.getStatus().equalsIgnoreCase("CANCEL")){
-		System.out.println("CANCEL ORDER");
-		order.setStaus("CANCELLED");
-		order.setMessage("Order is cancelled");
-	}
-	if(order.getStatus().equalsIgnoreCase("CHANGE")){
-		changeOrder();
-	}
-	messageTopic = order.getUser();
-	printOrder(order);
-	System.out.println("-----------------------------------------------------\n" + orders.toString());
-	return order;
 	
+
+	
+	public void confirmOrder(String orderStr){
+		String[] str = orderStr.split(";");
+		int orderID = Integer.parseInt(str[1]);
+		if(str[2].equalsIgnoreCase("OK")){
+			for(Order order:orders){
+				if(order.getOrderID() == orderID){
+					order.setStaus("CONFIRMED");
+					order.setMessage("A taxi is on it's way");
+					orderQue.remove(order);
+				}
+			}
+		}
+	}
+	
+	public String dummy(ArrayList<String> list){
+		return "taxi1";
+	}
 
 
 }

@@ -7,6 +7,7 @@ public class TaxiClient extends Block {
 
 	public static java.lang.String alias_taxi;
 	public Order order;
+	public String topic = "taxi";
 
 	public static String getAlias(String alias){
 		return alias_taxi;

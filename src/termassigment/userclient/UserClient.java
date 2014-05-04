@@ -12,6 +12,7 @@ public class UserClient extends Block {
 	public Order makeOrder(String alias, String adress){
 		if (order != null){
 			order.setStaus("CHANGE");
+			order.setDestiantion(adress);
 			order.setMessage(adress);
 		}else{
 			Order newOrder = new Order(alias, adress, "NEW");
