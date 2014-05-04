@@ -19,14 +19,11 @@ public class UserClient extends Block {
 		return order;
 	}
 
-	public String printString(String str){
-		System.out.println(str);
-		return str;
-	}
+
 	
 	
 	public String welcome(){
-		return "You're connected!";
+		return "You are connected!";
 	}
 	
 	public Order cancelOrder(){
@@ -46,15 +43,10 @@ public class UserClient extends Block {
 		return order.getMessage();
 	}
 
-	public Order orderPrint(Order r){
-		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-		System.out.println(r.toString());
-		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-		return r;
-	}
+
 	
 	public void setOrder(Order order){
-		if(order.getStatus().equalsIgnoreCase("CANCELLED")){
+		if(order.getStatus().equalsIgnoreCase("CANCELLED") || order.getStatus().equalsIgnoreCase("DONE")){
 			this.order = null;
 		} else{
 			this.order = order;

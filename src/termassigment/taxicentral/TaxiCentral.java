@@ -30,13 +30,6 @@ public class TaxiCentral extends Block {
 		return str;
 	}
 	public String getTopic(Order order){return order.getUser();}
-	
-	public ArrayList<Taxis> dummyTaxis(){
-		taxis = new ArrayList<Taxis>();
-			taxis.add(new Taxis("taxi0","ON DUTY","Lade, Trondheim, Norge"));
-			taxis.add(new Taxis("taxi1","OFF DUTY","Valentinlyst, Trondheim, Norge"));
-			taxis.add(new Taxis("taxi2","AVAILABLE","Tiller, Trondheim, Norge"));
-		return taxis;
-	}
+
 	
 }

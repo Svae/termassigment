@@ -277,11 +277,8 @@
   <graphics:Shape xmi:id="_Q6ckMdO3EeOUir7GWYdx9w" x="468" y="126" base_Element="_Q6bWENO3EeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_UpjTMNO3EeOUir7GWYdx9w" x="72" y="468" width="127" height="55" base_Element="_UpheANO3EeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_YQDf0NO3EeOUir7GWYdx9w" aux1="788 0 0 -130 " base_Element="_H2URQNO3EeOUir7GWYdx9w"/>
-  <graphics:Shape xmi:id="_h4G_MNO3EeOUir7GWYdx9w" x="891" y="567" width="37" height="37" base_Element="_h4FxENO3EeOUir7GWYdx9w"/>
-  <graphics:Shape xmi:id="_qf0b4NO3EeOUir7GWYdx9w" aux1="-792 0 0 -68 " base_Element="_qfxYkNO3EeOUir7GWYdx9w"/>
+  <graphics:Shape xmi:id="_h4G_MNO3EeOUir7GWYdx9w" x="855" y="578" base_Element="_h4FxENO3EeOUir7GWYdx9w"/>
+  <graphics:Shape xmi:id="_qf0b4NO3EeOUir7GWYdx9w" aux1="-756 -11 0 -68 " base_Element="_qfxYkNO3EeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_5Xt74NPFEeOUir7GWYdx9w" aux1="0 22 126 0 " base_Element="_V9hcgNO3EeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_6iSRkNPFEeOUir7GWYdx9w" aux1="382 0 -21 72  382 -72 -21 0 " base_Element="_ITbrENO3EeOUir7GWYdx9w"/>
-  <graphics:Shape xmi:id="_70mOANPFEeOUir7GWYdx9w" aux1="20 0 0 -22 " base_Element="_0YveQNO2EeOUir7GWYdx9w"/>
-  <graphics:Shape xmi:id="_946PINPFEeOUir7GWYdx9w" aux1="0 76 72 0 " base_Element="_jBebANO3EeOUir7GWYdx9w"/>
-  <graphics:Shape xmi:id="__sP1ANPFEeOUir7GWYdx9w" aux1="0 76 -72 0 " base_Element="_ikYPUNO3EeOUir7GWYdx9w"/>
 </xmi:XMI>

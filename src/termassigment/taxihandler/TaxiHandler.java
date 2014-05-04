@@ -12,16 +12,8 @@ public class TaxiHandler extends Block {
 	public ArrayList<Taxis> available = new ArrayList<Taxis>();
 	
 	
-	public void addTaxis(String taxi, String status, String pos){
-		Taxis newTaxi = new Taxis(taxi,status, pos);	
-		taxiList.add(newTaxi);
-	}
-	
-	public void inti(){
-		taxiList.add(new Taxis("taxi1","OFF DUTY", "Tiller"));
-	}
+
 	public void updateTaxi(String update){
-		System.out.println("UPDATE: " + update);
 		boolean newTaxi = true;
 		String[] prop = update.split(";");
 		for(Taxis taxi:taxiList){
@@ -31,9 +23,7 @@ public class TaxiHandler extends Block {
 				newTaxi = false;
 			}
 		}
-		if(newTaxi){addTaxis(prop[0],prop[1],prop[2]);}
-		for(Taxis t:taxiList)
-			System.out.println("TAXILIST: " + t.toString());
+		if(newTaxi){taxiList.add(new Taxis(prop[0],prop[1],prop[2]));}
 	}
 	
 	public ArrayList<Taxis> availableTaxis(){
@@ -48,21 +38,19 @@ public class TaxiHandler extends Block {
 	}
 	
 	public String orderUpdate(String orderStr){
-		System.out.println("CONFIRMENT");
 		String[] prop = orderStr.split(";");
 		if(prop[2].equalsIgnoreCase("CONFIRM")){
-			updateOrderTaxi(prop[1],"UNAVAILABLE");
+			for(Taxis taxi:taxiList){
+				if(taxi.getAlias().equalsIgnoreCase(prop[1])){
+					taxi.setStatus("UNAVAILABLE");
+				}
+			}
 		}
 		return orderStr;
 	}
 
 	public void updateOrderTaxi(String alias, String status){
-		for(Taxis taxi:taxiList){
-			if(taxi.getAlias().equalsIgnoreCase(alias)){
-				taxi.setStatus(status);
 			}
-		}
-	}
 
 
 }

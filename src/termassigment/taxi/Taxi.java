@@ -14,8 +14,5 @@ public class Taxi extends Block {
 	public static String getAlias(String alias){
 		return alias;
 	}
-	
-	public void pr(){
-		System.out.println("Ferdig :D");
-	}
+
 }

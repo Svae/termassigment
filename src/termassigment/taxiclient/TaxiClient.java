@@ -21,7 +21,6 @@ public class TaxiClient extends Block {
 	}
 	
 	public String onDuty(){
-		System.out.println("ALASA---------------:" + alias_taxi);
 		return alias_taxi+";ON DUTY ;" + position;
 	}
 	
@@ -54,7 +53,6 @@ public class TaxiClient extends Block {
 	}
 	
 	
-	//order.getDestination()+";"+order.getOrderID()+";"+order.getUser();
 	public  String makeMessage(String msg){
 		String[] str = msg.split(";");
 		destination = str[0];
@@ -80,5 +78,9 @@ public class TaxiClient extends Block {
 	public String journeyEnd(String position) {
 		this.position = position;
 		return alias_taxi+";"+status+";" + position;
+	}
+	
+	public String endResponse(String position){
+		return orderID+";"+alias_taxi+";DONE";
 	}
 }
