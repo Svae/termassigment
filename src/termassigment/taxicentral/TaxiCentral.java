@@ -20,24 +20,23 @@ public class TaxiCentral extends Block {
 	
 	
 	public void print(java.lang.String str) {
-		System.err.println(str);
+		System.out.println("-----------------------------------------------");
+		System.out.println(str);
+		System.out.println("-----------------------------------------------");
 	}
 	
 	public String pront(String str){
 		System.out.println(str);
 		return str;
 	}
-	public String getTopic(Order order){ return order.getUser();}
+	public String getTopic(Order order){return order.getUser();}
 	
 	public ArrayList<Taxis> dummyTaxis(){
 		taxis = new ArrayList<Taxis>();
-		for (int i = 1; i <4; i++) {
-			taxis.add(new Taxis("taxis"+1,"AVAILABLE","Tiller, Trondheim, Norway"));
-		}
+			taxis.add(new Taxis("taxi0","ON DUTY","Lade, Trondheim, Norge"));
+			taxis.add(new Taxis("taxi1","OFF DUTY","Valentinlyst, Trondheim, Norge"));
+			taxis.add(new Taxis("taxi2","AVAILABLE","Tiller, Trondheim, Norge"));
 		return taxis;
 	}
-	
-
-
 	
 }

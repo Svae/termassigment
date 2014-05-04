@@ -3,7 +3,7 @@ package termassigment.taxidispatcher.component;
 public class Order {
 
 	private String user, taxiID, destination, message, status;
-	private int orderID, userPos;
+	private int orderID;
 	
 	public String getUser() {
 		return user;
@@ -28,12 +28,12 @@ public class Order {
 		return status;
 	}
 
-	public Order(String user, String adress, String status){
+	public Order(String user, String destination, String status){
 		this.user = user;
 		this.destination = destination;
 		this.status = status;
 		this.orderID = 0;
-		this.message = "";
+		this.message = "New order";
 	}
 	
 	
@@ -69,8 +69,8 @@ public class Order {
 	}
 
 
-	public void setDestiantion(String adress) {
-		this.destination = adress;
+	public void setDestiantion(String destination) {
+		this.destination = destination;
 	}
 	
 }

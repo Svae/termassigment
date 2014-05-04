@@ -14,6 +14,18 @@ public class Component extends Block {
 		return taxilist;
 	}
 	
+	public String alias(){
+		return "taxi1";
+	}
+	
+	public void conf(){
+		System.out.println("Confirm");
+	}
+	
+	public void dec(){
+		System.out.println("Dec");
+	}
+	
 	public void print(String alias){
 		System.out.println(alias);
 	}
