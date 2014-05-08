@@ -29,4 +29,8 @@ public class Taxis {
 		this.position = position;
 	}
 	
+	public String toString(){
+		return "Alias: " + alias + " 	Status: " + status + " 	Position: " + position;
+	}
+	
 }

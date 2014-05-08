@@ -1,7 +1,5 @@
 package termassigment.taxiclient;
 
-import com.sun.media.sound.AlawCodec;
-
 import no.ntnu.item.arctis.runtime.Block;
 import no.ntnu.item.ttm4115.simulation.routeplanner.Journey;
 
@@ -12,7 +10,7 @@ public class TaxiClient extends Block {
 	public java.lang.String topic;
 	public java.lang.String response = "orderResponse";
 	public java.lang.String update = "taxiUpdate";
-	public java.lang.String status = "AVAILABLE";
+	public java.lang.String status = "OFF DUTY";
 	public java.lang.String position = "Trondheim S, Trondheim";
 	public java.lang.String message, destination, orderID, user;
 
@@ -20,6 +18,9 @@ public class TaxiClient extends Block {
 		return alias;
 	}
 	
+	public static String getAlias(Journey journey){
+		return journey.taxiAlias;
+	}
 	public String onDuty(){
 		return alias_taxi+";ON DUTY ;" + position;
 	}
@@ -58,9 +59,7 @@ public class TaxiClient extends Block {
 		destination = str[0];
 		orderID = str[1];
 		user =str[2];
-		return "New order - Address: " + destination + "	OrderID: " + orderID + "	Custommer: " + user;
-				
-				
+		return "New order - Address: " + destination + "	OrderID: " + orderID + "	Custommer: " + user;					
 	}
 	
 	public String getTopic(String topic){
@@ -75,12 +74,18 @@ public class TaxiClient extends Block {
 		return new Journey(alias_taxi,position, destination);
 	}
 
-	public String journeyEnd(String position) {
-		this.position = position;
+	public String journeyEnd(Journey journey) {
+		this.position = journey.toAddress;
+		System.out.println("ENDOFJOURNEY: " + this.position);
 		return alias_taxi+";"+status+";" + position;
 	}
 	
-	public String endResponse(String position){
+	public String endResponse(){
 		return orderID+";"+alias_taxi+";DONE";
+	}
+	
+	public String print(String s){
+		System.out.println("DESTIANTION---: " + this.position);
+		return s;
 	}
 }

@@ -477,7 +477,7 @@
   <graphics:Shape xmi:id="_D56uINOsEeOUir7GWYdx9w" x="486" y="486" base_Element="_CPxggNOsEeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_EdtXsNOsEeOUir7GWYdx9w" x="540" y="450" base_Element="_BWM0MNOsEeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_BBxl4NO4EeOUir7GWYdx9w" x="1188" y="612" base_Element="_BBsGUNO4EeOUir7GWYdx9w" orientation="east"/>
-  <graphics:Shape xmi:id="_nks5INO4EeOUir7GWYdx9w" x="306" y="540" width="199" height="55" base_Element="_nklkYNO4EeOUir7GWYdx9w"/>
+  <graphics:Shape xmi:id="_nks5INO4EeOUir7GWYdx9w" x="288" y="540" width="199" height="55" base_Element="_nklkYNO4EeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_pFLNYNO4EeOUir7GWYdx9w" aux1="0 39 -788 0 " base_Element="_nkkWQNO4EeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_rW6mgNO4EeOUir7GWYdx9w" x="396" y="396" width="19" height="54" base_Element="_rW5YYNO4EeOUir7GWYdx9w" orientation="east"/>
   <arctis:event xmi:id="_0PdUgNO4EeOUir7GWYdx9w" base_Transition="_0PctcNO4EeOUir7GWYdx9w" effects="_BBsGUNO4EeOUir7GWYdx9w"/>
@@ -486,7 +486,7 @@
   <graphics:Shape xmi:id="_SOWloNPDEeOUir7GWYdx9w" aux1="324 -54 108 198 " base_Element="_QxuPkNPDEeOUir7GWYdx9w"/>
   <arctis:event xmi:id="_fpLMANPDEeOUir7GWYdx9w" base_Transition="_fpJ94NPDEeOUir7GWYdx9w" triggers="_R_4hQNPCEeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_UsX4gNPJEeOUir7GWYdx9w" x="234" y="594" width="19" height="54" base_Element="_UqPKgNPJEeOUir7GWYdx9w" orientation="east"/>
-  <graphics:Shape xmi:id="_sVfe4NPJEeOUir7GWYdx9w" x="144" y="540" width="199" height="55" base_Element="_sVWU8NPJEeOUir7GWYdx9w" orientation="north"/>
+  <graphics:Shape xmi:id="_sVfe4NPJEeOUir7GWYdx9w" x="108" y="540" width="199" height="55" base_Element="_sVWU8NPJEeOUir7GWYdx9w" orientation="north"/>
   <graphics:Shape xmi:id="_yS7tsNPJEeOUir7GWYdx9w" aux1="0 -22 -216 108  126 -22 -90 108  126 -58 -90 72  216 -58 0 72 " base_Element="_wccGINPJEeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_45CCgNPKEeOUir7GWYdx9w" x="477" y="351" width="37" height="37" base_Element="_423fUdPKEeOUir7GWYdx9w"/>
   <graphics:Shape xmi:id="_-mTF8NX8EeO-FYSpT5H69w" x="450" y="234" width="199" height="55" base_Element="_-lLroNX8EeO-FYSpT5H69w" orientation="north"/>

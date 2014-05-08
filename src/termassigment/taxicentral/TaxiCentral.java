@@ -20,13 +20,13 @@ public class TaxiCentral extends Block {
 	
 	
 	public void print(java.lang.String str) {
-		System.out.println("-----------------------------------------------");
-		System.out.println(str);
-		System.out.println("-----------------------------------------------");
+		
 	}
 	
 	public String pront(String str){
+		System.out.println("-----------------------------------------------");
 		System.out.println(str);
+		System.out.println("-----------------------------------------------");
 		return str;
 	}
 	public String getTopic(Order order){return order.getUser();}

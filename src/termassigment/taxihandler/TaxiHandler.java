@@ -14,6 +14,13 @@ public class TaxiHandler extends Block {
 	
 
 	public void updateTaxi(String update){
+		System.out.println("___________________________________");
+		System.out.println("Update taxi: " + update);
+		System.out.println("-----------------------------------");
+		System.out.println("taxiList: " + taxiList.toString());
+		System.out.println("-----------------------------------");
+		System.out.println("Available: " + available.toString());
+		System.out.println("___________________________________");
 		boolean newTaxi = true;
 		String[] prop = update.split(";");
 		for(Taxis taxi:taxiList){
@@ -38,6 +45,13 @@ public class TaxiHandler extends Block {
 	}
 	
 	public String orderUpdate(String orderStr){
+		System.out.println("+++++++++++++++++++++++++++++++++++");
+		System.out.println("ORDERSTR: " + orderStr);
+		System.out.println("-----------------------------------");
+		System.out.println("taxiList: " + taxiList.toString());
+		System.out.println("-----------------------------------");
+		System.out.println("Available: " + available.toString());
+		System.out.println("+++++++++++++++++++++++++++++++++++");
 		String[] prop = orderStr.split(";");
 		if(prop[2].equalsIgnoreCase("CONFIRM")){
 			for(Taxis taxi:taxiList){
