@@ -9,18 +9,16 @@ public class UserClient extends Block {
 	public java.lang.String topic = "order";
 	public termassigment.taxidispatcher.component.Order order;
 	
-	public Order makeOrder(String adress){
-		if (order != null){
+	public Order makeOrder(String address){
+		if (order != null || address.equalsIgnoreCase("") || address == null){
 			return null;
 		}else{
-			Order newOrder = new Order(alias_customer, adress, "NEW");
+			Order newOrder = new Order(alias_customer, address, "NEW");
 			this.order = newOrder;
 		}
 		return order;
 	}
 
-
-	
 	
 	public String welcome(){
 		return "You are connected!";

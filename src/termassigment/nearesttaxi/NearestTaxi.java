@@ -13,9 +13,7 @@ public class NearestTaxi extends Block {
 	public java.util.ArrayList<java.lang.String> taxis;
 	
 	public Journey createJourey(){
-		System.out.println("SHORTESTPATH: " + shortestPath );
 			if(taxis != null && taxis.size()>0){
-				System.out.println("CREATE Journey: " + taxis.get(0).toString());
 				str = taxis.get(0).toString().split(";");
 				taxis.remove(0);
 				Journey j = new Journey(str[0],str[1],str[2]);
@@ -46,7 +44,6 @@ public class NearestTaxi extends Block {
 		return (taxis.size()==0);
 	}
 	public String dispatchTaxi(){
-		System.out.println("ALDASD: " + alias + ",,," + shortestPath);
 		return alias;
 	}
 	

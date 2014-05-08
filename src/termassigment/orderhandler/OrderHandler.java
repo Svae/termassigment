@@ -26,11 +26,11 @@ public class OrderHandler extends Block {
 	}
 	
 	
-	
 	public Order newOrder(Order order){
 		order.setOrderID(orderID);
 		order.setStaus("WAITING");
-		order.setMessage("Your order has been recieved");
+		if(orderQue.size()>0) order.setMessage("Your order has been received. Your que position: " + orderQue.size());
+		else order.setMessage("Your order has been received, you are next in line!");
 		orderID ++;
 		orders.add(order);
 		orderQue.add(order);
@@ -42,16 +42,19 @@ public class OrderHandler extends Block {
 	// --------- ORDER --------- NEWORDER ---------
 
 	public Order cancelOrder(Order order){
+		Order cancelledOrder = null;
 		for(Order ord:orderQue){
 			if(ord.getOrderID() == order.getOrderID()){
-				orderQue.remove(ord);
+				cancelledOrder = ord;
 				for(Order ords:orders){
 					if(ords.getOrderID() == order.getOrderID()){
 						ord.setStaus("CANCELLED");
 					}
 				}
 			}
-		};			
+		}		
+		
+		if(cancelledOrder != null) orderQue.remove(cancelledOrder);
 		order.setMessage("The order has been cancelled");
 		order.setStaus("CANCELLED");
 		return order;
@@ -62,17 +65,20 @@ public class OrderHandler extends Block {
 
 	
 	public ArrayList<String> proccessOrder(Order order){
-		if (order != null){
-			available = new ArrayList<String>();
-			for(Taxis taxi:taxis){
-				available.add(taxi.getAlias()+";"+taxi.getPosistion()+";"+ order.getDestination());
+		if(taxis.size()>0){
+			if (order != null){
+				available = new ArrayList<String>();
+				for(Taxis taxi:taxis){
+					available.add(taxi.getAlias()+";"+taxi.getPosistion()+";"+ order.getDestination());
+				}
+				return available;
 			}
-			return available;
 		}
 		return null;
 	}
 	
 	public Order nextOrder(){
+		System.out.println("ORDERQUE: " + orderQue.toString());
 		if (orderQue.size()>0){
 			return orderQue.get(0);
 		}
@@ -88,7 +94,7 @@ public class OrderHandler extends Block {
 				ord.setStaus("SENT");
 			}
 		}
-		for(Order ords:orders){
+		for(Order ords:orderQue){
 			if(ords.getOrderID() == order.getOrderID()){
 				ords.setStaus("SENT");
 			}
@@ -107,11 +113,6 @@ public class OrderHandler extends Block {
 				if(order.getOrderID() == orderID){
 					order.setStaus("CONFIRMED");
 					order.setTaxi(str[1]);
-					for(Order ord:orders){
-						if(ord.getOrderID() == order.getOrderID()){
-							ord.setStaus("CONFIRMED");
-						}
-					}
 					order.setMessage("A taxi is on its way");
 					orderQue.remove(0);
 					return order;
@@ -121,11 +122,6 @@ public class OrderHandler extends Block {
 			for(Order order:orders){
 				if(order.getOrderID() == orderID){
 					order.setStaus("DONE");
-						for(Order ord:orders){
-							if(ord.getOrderID() == order.getOrderID()){
-								ord.setStaus("DONE");
-							}
-						}
 					}
 				} return order;
 			}
@@ -139,7 +135,5 @@ public class OrderHandler extends Block {
 	public String makeTopic(String alias){
 		return alias+";order";
 	}
-	
-
 
 }

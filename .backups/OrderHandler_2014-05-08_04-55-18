@@ -330,5 +330,5 @@
   <graphics:Shape xmi:id="_sbgl4Na_EeOgMZgS9taN7g" x="288" y="324" base_Element="_m8G98Na_EeOgMZgS9taN7g"/>
   <arctis:event xmi:id="_adBxoNbAEeOgMZgS9taN7g" base_Transition="_adBKkNbAEeOgMZgS9taN7g" triggers="_nRPmANIVEeOYt_nnQUnrFg"/>
   <graphics:Shape xmi:id="_t2HGMtbAEeOgMZgS9taN7g" x="297" y="279" width="37" height="37" base_Element="_t2F4ENbAEeOgMZgS9taN7g"/>
-  <graphics:Shape xmi:id="_whMMYNbAEeOgMZgS9taN7g" x="288" y="252" base_Element="_wR_50NbAEeOgMZgS9taN7g"/>
+  <graphics:Shape xmi:id="_whMMYNbAEeOgMZgS9taN7g" x="234" y="270" base_Element="_wR_50NbAEeOgMZgS9taN7g"/>
 </xmi:XMI>

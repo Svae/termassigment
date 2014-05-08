@@ -38,14 +38,12 @@ public class TaxiClient extends Block {
 	}
 	
 	public String confirm(){
-		if(orderID != null)
-		return orderID + ";" +  alias_taxi + ";CONFIRM";
+		if(orderID != null) {return orderID + ";" +  alias_taxi + ";CONFIRM";}
 		return null;
 	}
 	
 	public String decline(){
-		if(orderID != null)
-		return orderID + ";" +  alias_taxi + ";DECLINE";
+		if(orderID != null){return orderID + ";" +  alias_taxi + ";DECLINE";}
 		return null;
 	}
 	
@@ -84,8 +82,4 @@ public class TaxiClient extends Block {
 		return orderID+";"+alias_taxi+";DONE";
 	}
 	
-	public String print(String s){
-		System.out.println("DESTIANTION---: " + this.position);
-		return s;
-	}
 }

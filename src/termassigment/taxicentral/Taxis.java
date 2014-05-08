@@ -2,7 +2,8 @@ package termassigment.taxicentral;
 
 public class Taxis {
 
-	private String alias, status, position;
+	private String alias, status, position, type;
+	private int capacity;
 
 	public String getAlias() {
 		return alias;
@@ -27,6 +28,8 @@ public class Taxis {
 		this.alias = alias;
 		this.status = status;
 		this.position = position;
+		this.type = "";
+		this.capacity = 0;
 	}
 	
 	public String toString(){
